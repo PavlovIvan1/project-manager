@@ -2,7 +2,6 @@
 
 import { BarChart } from '@/components/barchart'
 import { DoughnutChart } from '@/components/doughnutchart'
-import { LineChart } from 'lucide-react'
 
 export default function Fin() {
 	return (
@@ -13,7 +12,6 @@ export default function Fin() {
 			<div>
 				<BarChart />
 				<DoughnutChart />
-				<LineChart
 			</div>
 		</>
 	)
