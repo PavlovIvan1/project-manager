@@ -2,7 +2,6 @@
 
 import { Pinned } from '@/components/pinned'
 import { StatToday } from '@/components/todays'
-import { Settings, UserCircleIcon } from 'lucide-react'
 import { useEffect } from 'react'
 
 export default function Home() {
@@ -28,12 +27,12 @@ export default function Home() {
   return (
     <>
       <div className='Page'>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        {/* <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <div style={{display: 'flex', alignItems: 'center'}}>
             <UserCircleIcon width={30} height={30} />
           </div>
           <Settings />
-        </div>
+        </div> */}
         <Pinned />
         {/* <Daily /> */}
 

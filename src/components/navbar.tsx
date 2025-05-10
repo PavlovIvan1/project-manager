@@ -184,7 +184,7 @@ export function NavBar() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        background: 'white',
+        background: '#14141',
         borderTopLeftRadius: '20px',
         borderTopRightRadius: '20px',
         padding: '10px 20px',
@@ -206,7 +206,7 @@ export function NavBar() {
         <div 
           onClick={handleCreateProject}
           style={{
-            background: 'black',
+            background: 'white',
             width: '50px',
             height: '50px',
             borderRadius: '100%',
@@ -218,7 +218,7 @@ export function NavBar() {
           }} 
           className="hover:scale-105"
         >
-          <Plus color='white' width={35} height={35} strokeWidth={2} />
+          <Plus color='black' width={35} height={35} strokeWidth={2} />
         </div>
 
         {iconRoutes.map((route, index) => {
