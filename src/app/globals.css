@@ -5,8 +5,8 @@
 :root {
   /* background: #15192E;
   background: linear-gradient(161deg,rgba(21, 25, 46, 1) 0%, rgba(22, 21, 29, 1) 51%); */
-
-  background: #e6e6e6;
+/* 
+  background: #e6e6e6; */
   --font-poppins: ${poppins.style.fontFamily};
 }
 
