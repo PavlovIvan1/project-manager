@@ -11,7 +11,7 @@ export function Category({ color, title, projects, classp, categoryId }) {
 	const router = useRouter()
 
 	const handleClick = () => {
-    router.push(`/projects/category/${categoryId}`)
+		router.push(`/projects/category/${encodeURIComponent(categoryId)}`)
   }
 
 	return (
