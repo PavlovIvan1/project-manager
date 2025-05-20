@@ -248,6 +248,7 @@ export function CategoryList() {
               classp={config.keyword}
               title={config.subtitle}
               projects={cat.project_count}
+              categoryId={cat.category}
             />
           )
         })}
