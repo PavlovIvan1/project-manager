@@ -1,10 +1,4 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/categories/page": "app/categories/page.js",
-  "/fin/page": "app/fin/page.js",
-  "/page": "app/page.js",
-  "/projects/ category/[category]/page": "app/projects/ category/[category]/page.js",
-  "/projects/create/page": "app/projects/create/page.js",
-  "/projects/page": "app/projects/page.js"
+  "/page": "app/page.js"
 }
