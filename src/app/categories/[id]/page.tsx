@@ -2,7 +2,11 @@
 // src/app/projects/category/[category]/page.tsx
 'use client'
 
+import { Project } from '@/components/project'
+import { API_URL } from '@/config/config'
+import axios from 'axios'
 import { useEffect, useState } from 'react'
+
 
 export default function CategoryProjectsPage({ params }) {
   const [projects, setProjects] = useState([])
