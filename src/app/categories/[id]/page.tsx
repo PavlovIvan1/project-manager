@@ -17,7 +17,7 @@ export default function CategoryProjectsPage({ params }) {
   const router = useRouter()
 
   useEffect(() => {
-    console.log('Slug', params, router.query, router.query.slug)
+    console.log(router.query.slug)
     console.log('API URL:', `${API_URL}/projects/category/${params.category}`)
     const fetchProjects = async () => {
       try {
