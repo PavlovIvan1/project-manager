@@ -3,7 +3,6 @@
 'use client'
 
 import { Project } from '@/components/project'
-import { API_URL } from '@/config/config'
 import axios from 'axios'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
@@ -18,7 +17,7 @@ export default function CategoryProjectsPage({ params }) {
 
   useEffect(() => {
     console.log(router.query.slug)
-    console.log('API URL:', `${API_URL}/projects/category/${params.category}`)
+    console.log('API URL:', `http://localhost:8000/projects/category/${params.category}`)
     const fetchProjects = async () => {
       try {
         setLoading(true)
