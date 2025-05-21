@@ -5,6 +5,7 @@
 import { Project } from '@/components/project'
 import { API_URL } from '@/config/config'
 import axios from 'axios'
+import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
 
@@ -13,8 +14,10 @@ export default function CategoryProjectsPage({ params }) {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
+  const router = useRouter()
+
   useEffect(() => {
-    console.log('API URL:', `${API_URL}/projects/category/${params}`)
+    console.log('Slug', params, router.query, router.query.slug)
     console.log('API URL:', `${API_URL}/projects/category/${params.category}`)
     const fetchProjects = async () => {
       try {
