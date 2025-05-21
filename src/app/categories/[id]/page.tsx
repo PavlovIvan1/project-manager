@@ -14,6 +14,7 @@ export default function CategoryProjectsPage({ params }) {
   const [error, setError] = useState(null)
 
   useEffect(() => {
+    console.log('API URL:', `${API_URL}/projects/category/${params}`)
     console.log('API URL:', `${API_URL}/projects/category/${params.category}`)
     const fetchProjects = async () => {
       try {
