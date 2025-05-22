@@ -4,7 +4,6 @@
 
 import { Project } from '@/components/project'
 import axios from 'axios'
-import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
 
@@ -13,11 +12,8 @@ export default function CategoryProjectsPage({ params }) {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
-  const router = useRouter()
 
   useEffect(() => {
-    console.log(router.query.slug)
-    console.log('API URL:', `http://localhost:8000/projects/category/${params.category}`)
     const fetchProjects = async () => {
       try {
         setLoading(true)
@@ -29,7 +25,7 @@ export default function CategoryProjectsPage({ params }) {
           throw new Error('Telegram user ID not available')
         }
         // ${API_URL}
-        const response = await axios.get(`http://localhost:8000/get_projects_by_category?category=web_app_development`, {
+        const response = await axios.get(`http://localhost:8000/get_projects_by_category?category=web_app_design`, {
           headers: {
             'auth': userId,
             'Content-Type': 'application/json'
