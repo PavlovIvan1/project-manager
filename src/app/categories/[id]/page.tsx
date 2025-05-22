@@ -76,9 +76,6 @@
 
 //   return (
 //     <div style={{ padding: '20px' }}>
-//       <h2 style={{ marginBottom: '20px' }}>
-//         {params.category.replace(/_/g, ' ')} Projects
-//       </h2>
       
 //       {projects.length > 0 ? (
 //         projects.map((project) => (
@@ -144,7 +141,7 @@ export default function CategoryProjectsPage({ params }) {
 
   return (
     <div style={{ padding: '20px' }}>
-      <h2>{params.category.replace(/_/g, ' ')} Projects</h2>
+      {/* <h2>{params.category.replace(/_/g, ' ')} Projects</h2> */}
       {data?.data?.length > 0 ? (
         data.data.map(project => (
           <Project 
