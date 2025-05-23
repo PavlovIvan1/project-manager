@@ -120,7 +120,7 @@ export default function CategoryProjectsPage({ params: initialParams }) {
 
   useEffect(() => {
     console.log('params', params)
-    const category = params.category
+    const category = params.id
     console.log('category', category)
 
     const fetchProjects = async () => {
