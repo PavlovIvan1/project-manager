@@ -4,6 +4,7 @@
 
 import { Project } from '@/components/project'
 import axios from 'axios'
+import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
 
@@ -11,9 +12,16 @@ export default function CategoryProjectsPage({ params }) {
   const [projects, setProjects] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const router = useRouter()
 
 
   useEffect(() => {
+    console.log('params', params)
+    const category = router.query.id
+    console.log('category', category)
+    console.log('router', router)
+
+
     const fetchProjects = async () => {
       try {
         setLoading(true)
