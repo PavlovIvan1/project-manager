@@ -141,7 +141,7 @@ export default function CategoryProjectsPage({ params: initialParams }) {
           }
         })
 
-        setProjects(response.data)
+        setProjects(response.data.projects || [])
       } catch (err) {
         console.error('Failed to fetch projects:', err)
         setError(err instanceof Error ? err.message : 'Unknown error')
