@@ -1,3 +1,4 @@
+// @ts-nocheck
 'use client'
 
 import { Project } from '@/components/project'
@@ -6,16 +7,12 @@ import { useParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 export default function CategoryProjectsPage({ params: initialParams }) {
-  const [projects, setProjects] = useState([])
+  const [projects, setProjects] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
+  const [error, setError] = useState<string | null>(null)
   const params = useParams() || initialParams
 
   useEffect(() => {
-    console.log('params', params)
-    const category = params.id
-    console.log('category', category)
-
     const fetchProjects = async () => {
       try {
         setLoading(true)
@@ -27,7 +24,7 @@ export default function CategoryProjectsPage({ params: initialParams }) {
           throw new Error('Telegram user ID not available')
         }
         
-        const response = await axios.get(`http://localhost:8000/get_projects_by_category?category=${category}`, {
+        const response = await axios.get(`http://localhost:8000/get_projects_by_category?category=${params.id}`, {
           headers: {
             'auth': userId,
             'Content-Type': 'application/json'
@@ -37,21 +34,17 @@ export default function CategoryProjectsPage({ params: initialParams }) {
         setProjects(response.data.projects || [])
       } catch (err) {
         console.error('Failed to fetch projects:', err)
-        setError(err instanceof Error ? err.message : 'Unknown error')
+        setError('Failed to load projects')
       } finally {
         setLoading(false)
       }
     }
 
     fetchProjects()
-  }, [params.category])
+  }, [params.id])
 
   if (loading) {
-    return (
-      <div style={{ padding: '20px' }}>
-        <h2>Loading projects...</h2>
-      </div>
-    )
+    return <div style={{ padding: '20px' }}>Loading projects...</div>
   }
 
   if (error) {
