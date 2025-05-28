@@ -51,7 +51,7 @@ export const AnalyticsDashboard = () => {
 
   return (
     <div style={{ padding: '20px', maxWidth: '1200px', margin: '0 auto' }}>
-      <h1 style={{ textAlign: 'center', marginBottom: '30px' }}>Analytics Dashboard</h1>
+      {/* <h1 style={{ textAlign: 'center', marginBottom: '30px' }}>Analytics Dashboard</h1> */}
       
       <div style={{ 
         display: 'grid',
@@ -66,7 +66,7 @@ export const AnalyticsDashboard = () => {
         />
         <StatCard 
           title="Total Projects" 
-          value={generalStats.total_projects} 
+          value={generalStats.project_count} 
           color="#36a2eb"
         />
         <StatCard 
