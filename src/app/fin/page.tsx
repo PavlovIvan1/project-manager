@@ -1,7 +1,6 @@
 'use client'
 
-import { BarChart } from '@/components/barchart'
-import { DoughnutChart } from '@/components/doughnutchart'
+import { AnalyticsDashboard } from '@/components/AnalyticsDashboard'
 
 export default function Fin() {
 	return (
@@ -10,8 +9,9 @@ export default function Fin() {
 				<h2 style={{color: '#1E1E1E', fontWeight: '500',  margin: '0', marginTop: '20px'}}>Finance</h2>
 			</div>
 			<div>
-				<BarChart />
-				<DoughnutChart />
+				{/* <BarChart />
+				<DoughnutChart /> */}
+				<AnalyticsDashboard />
 			</div>
 		</>
 	)
