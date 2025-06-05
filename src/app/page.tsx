@@ -24,22 +24,13 @@ export default function Home() {
     });
 
     setName(tg.initDataUnsafe.user?.first_name || '');
-  
+    
     tg.ready();
     tg.expand();
   }, []);
 
   return (
     <>
-      {/* <div className='Page'>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        </div>
-        <Project name='ads' budget={100} />
-        <Pinned />
-        {/* <Daily /> */}
-        {/* <StatToday /> */}
-      {/* </div> */}
-
       <div className='Page'>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <div>

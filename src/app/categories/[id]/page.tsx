@@ -24,7 +24,7 @@ export default function CategoryProjectsPage({ params: initialParams }) {
           throw new Error('Telegram user ID not available')
         }
         
-        const response = await axios.get(`http://localhost:8000/get_projects_by_category?category=${params.id}`, {
+        const response = await axios.get(`https://bug-free-invention-x5wq9g59qqr7cv5p5-8000.app.github.dev//get_projects_by_category?category=${params.id}`, {
           headers: {
             'auth': userId,
             'Content-Type': 'application/json'

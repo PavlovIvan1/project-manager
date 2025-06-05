@@ -21,7 +21,7 @@ export const AnalyticsDashboard = () => {
           throw new Error('Telegram user ID not available')
         }
         
-        const response = await fetch(`http://localhost:8000/analytics`, {
+        const response = await fetch(`https://bug-free-invention-x5wq9g59qqr7cv5p5-8000.app.github.dev//analytics`, {
           headers: {
             'auth': userId,
             'Content-Type': 'application/json'

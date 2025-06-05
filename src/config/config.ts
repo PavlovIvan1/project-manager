@@ -1,1 +1,1 @@
-export const API_URL = 'http://localhost:8000'
+export const API_URL = 'https://bug-free-invention-x5wq9g59qqr7cv5p5-8000.app.github.dev/'
